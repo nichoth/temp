@@ -16,16 +16,16 @@ const copy = `
 </svg>
 `
 
-email!.addEventListener('click', (ev) => {
+email.addEventListener('click', (ev) => {
     ev.preventDefault()
     copyClipboardApi('erin@erin-s.com')
     const message = document.getElementById('message')
-    message!.style.display = 'block'
+    message.style.display = 'block'
     const icon = email?.querySelector('#icon')
-    icon!.innerHTML = checkmark
+    icon.innerHTML = checkmark
     setTimeout(() => {
-        message!.style.display = 'none'
-        icon!.innerHTML = copy
+        message.style.display = 'none'
+        icon.innerHTML = copy
     }, 2000)
 })
 
