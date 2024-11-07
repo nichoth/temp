@@ -1,0 +1,51 @@
+#message {
+    display: none;
+}
+
+#email {
+    border: 2px solid black;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    width: 326px;
+    border-radius: 100px;
+    margin: 32px;
+    font-size: 34px;
+    /* border: none; */
+    font-weight: 400;
+    cursor: pointer;
+    color: #010100;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: width 0.3s ease-in-out;
+}
+
+#email::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #00DBC4;
+    border-radius: 100px;
+    transform-origin: left;
+    transition: all 0.3s ease-in-out;
+    /* transition: scale .55s ease-out; */
+    z-index: -1;
+}
+
+#email:hover::before {
+  width: 100%;
+}
+
+#email svg {
+    margin-left: 10px;
+}
+
+#email svg.copy, #email svg.success {
+    margin-right: 1rem;
+}
